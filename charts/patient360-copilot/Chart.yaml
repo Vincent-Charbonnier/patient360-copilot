@@ -1,0 +1,6 @@
+apiVersion: v2
+name: patient360-copilot
+description: A Helm chart for the Patient360 Copilot demo with external ChromaDB and optional Istio routing.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

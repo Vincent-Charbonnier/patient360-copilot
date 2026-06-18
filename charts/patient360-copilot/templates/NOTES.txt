@@ -1,0 +1,16 @@
+Patient360 Copilot has been installed.
+
+Streamlit service:
+  {{ include "patient360-copilot.fullname" . }}:{{ .Values.service.streamlitPort }}
+
+FastAPI service:
+  {{ include "patient360-copilot.fullname" . }}:{{ .Values.service.apiPort }}
+
+{{- if .Values.ezua.virtualService.enabled }}
+Istio endpoint:
+  {{ .Values.ezua.virtualService.endpoint }}
+{{- end }}
+
+ChromaDB is not required for the pod to start.
+After the UI is available, open Settings, configure the remote ChromaDB endpoint,
+save settings, and run Reindex documents.
